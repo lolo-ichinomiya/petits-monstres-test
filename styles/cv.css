@@ -1,0 +1,81 @@
+.photo_info
+{
+	height: 150px;
+}
+
+.info 
+{
+	float: left;
+	width: 50%;
+}
+
+.photo 
+{
+	float: right;
+}
+
+.photo > img
+{
+	border: 3px solid #000000;
+}
+
+.section
+{
+	margin-bottom: 20px;
+	text-align: justify;
+}
+
+.section h2
+{
+	font-size: 20px;
+	color: #000080;
+	text-transform: uppercase;
+	border-bottom: 3px solid #000080;
+}
+
+
+.cv-line
+{
+	margin-top: 5px;
+}
+
+.cv-line-year
+{
+	float: left;
+	width: 200px;
+	
+	font-weight: bold;
+	font-size: 15px;
+	padding-top: 0px;
+}
+
+.cv-line-year > p 
+{
+	margin-top: 0px;
+}
+
+.cv-line-content
+{
+	margin-left: 230px;
+}
+
+.cv-line-content p 
+{
+	margin-top: 0px;
+}
+
+p.cv-line-title
+{
+	
+	font-weight: bold;
+}
+
+.cv-line-content
+{
+	
+}
+
+strong
+{
+	font-size: 15px;
+}
