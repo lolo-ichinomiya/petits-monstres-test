@@ -166,8 +166,8 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  /*background-image: url('../images/banner.png');*/
-  background-color: #000;
+  background-image: url('../images/body-bg-paris.jpg');
+  /*background-color: #000;*/
   text-align: center;
   color: white;
 }

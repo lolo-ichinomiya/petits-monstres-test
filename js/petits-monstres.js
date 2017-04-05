@@ -1,4 +1,4 @@
-var app = angular.module('petitsMonstres', ['ngRoute', 'ngLocalize', 'slick']);
+var app = angular.module('petitsMonstres', ['ngRoute', 'ngLocalize']);
 
 app.value('localeConf', {
     basePath: 'lang',
@@ -58,70 +58,75 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
   $scope.displayRamses = function() {
 
     $scope.selectedImages = [
-      { id: 1, name:'Freddy1', url: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19 (1).jpg' },
-      { id: 1, name:'Freddy1', url: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19.jpg' },
+      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19 (1).jpg', w: 600, h: 400 },
+      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19.jpg', w: 600, h: 400 },
     ];
 
-    $scope.rebuildSlick();
+    $scope.starSelectedGalery();
   };
 
   $scope.displayFreddy = function() {
 
     $scope.selectedImages = [
-      { id: 1, name:'Freddy1', url: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0968.JPG' },
-      { id: 2, name:'Freddy2', url: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0974.JPG' },
-      { id: 3, name:'Freddy3', url: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0982.JPG' },
-      { id: 4, name:'Freddy4', url: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0989.JPG' },
-      { id: 5, name:'Freddy5', url: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_1005.JPG' },
-      { id: 6, name:'Freddy6', url: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + '2016-07-27.jpg' },
+      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0968.JPG', w: 600, h: 400 },
+      { id: 2, name:'Freddy2', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0974.JPG', w: 600, h: 400 },
+      { id: 3, name:'Freddy3', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0982.JPG', w: 600, h: 400 },
+      { id: 4, name:'Freddy4', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0989.JPG', w: 600, h: 400 },
+      { id: 5, name:'Freddy5', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_1005.JPG', w: 600, h: 400 },
+      { id: 6, name:'Freddy6', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + '2016-07-27.jpg', w: 600, h: 400 },
     ];
 
-    $scope.rebuildSlick();
+    $scope.starSelectedGalery();
   };
 
   $scope.displayUlala = function() {
     $scope.selectedImages = [
-      { id: 1, name:'Ulala', url: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0138.JPG' },
-      { id: 2, name:'Ulala', url: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0139.JPG' },
-      { id: 3, name:'Ulala', url: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0206.JPG' },
-      { id: 4, name:'Ulala', url: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0235.JPG' },
-      { id: 5, name:'Ulala', url: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0281.JPG' },
-      { id: 6, name:'Ulala', url: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0328.JPG' },
-      { id: 7, name:'Ulala', url: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0357.JPG' },
+      { id: 1, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0138.JPG', w: 600, h: 400 },
+      { id: 2, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0139.JPG', w: 600, h: 400 },
+      { id: 3, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0206.JPG', w: 600, h: 400 },
+      { id: 4, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0235.JPG', w: 600, h: 400 },
+      { id: 5, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0281.JPG', w: 600, h: 400 },
+      { id: 6, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0328.JPG', w: 600, h: 400 },
+      { id: 7, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0357.JPG', w: 600, h: 400 },
     ];
 
-    $scope.rebuildSlick();
+    $scope.starSelectedGalery();
   };
-
-  $scope.rebuildSlick = function() {
-    $scope.numberLoaded = false; // disable slick
-    $timeout(function () {
-      $scope.numberLoaded = true;
-
-      $scope.slickConfig = {
-        enabled: true,
-        autoplay: true,
-        draggable: false,
-        autoplaySpeed: 3000,
-        method: {},
-        event: {
-            beforeChange: function (event, slick, currentSlide, nextSlide) {
-              console.log("milka");
-            },
-            afterChange: function (event, slick, currentSlide, nextSlide) {
-              console.log("milka");
-            }
-        }
-    };
-    }, 1000);
-  };
-
-
 
   $scope.numberLoaded = true;
 
-  $scope.displayFreddy();
+  $scope.starSelectedGalery = function() {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
 
+    // build items array
+    var items = $scope.selectedImages;
+    /*var items = [
+        {
+            src: 'images/ulala/IMG_0138.JPG',
+            w: 600,
+            h: 400
+        },
+        {
+            src: 'images/ulala/IMG_0139.JPG',
+            w: 1200,
+            h: 900
+        }
+    ];*/
+
+    // define options (if needed)
+    var options = {
+        // optionName: 'option value'
+        // for example:
+        index: 0, // start at first slide
+        // modal: false
+    };
+
+    // Initializes and opens PhotoSwipe
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+  };
+
+  $scope.displayFreddy();
 	// $scope.setLocale('jp-JP');
 
 
@@ -142,5 +147,6 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
   $(window).on('orientationchange', function() {
     $('.js-slider').slick('resize');
   });*/
+
 
 });
