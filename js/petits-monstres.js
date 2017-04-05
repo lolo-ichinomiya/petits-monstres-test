@@ -48,7 +48,7 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
 		// startTyped(typedValue[$scope.locale.getLocale()]);
 	}
 
-  $scope.baseImagesUrl = 'images/';
+  $scope.baseImagesUrl = 'images/pets/';
   $scope.baseImagesUrlRamses = 'ramses/';
   $scope.baseImagesUrlFreddy = 'freddy/';
   $scope.baseImagesUrlUlala = 'ulala/';
