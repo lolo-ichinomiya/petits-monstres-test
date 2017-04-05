@@ -62,16 +62,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a data-i18n="common.ramses" ng-click="displayRamses();">Ramsès</a>
+                        <a class="page-scroll" href="#nous" data-i18n="common.nous">Nous</a>
                     </li>
                     <li>
-                        <a data-i18n="common.freddy" ng-click="displayFreddy();">Freddy</a>
-                    </li>
-                    <li>
-                        <a data-i18n="common.ulala" ng-click="displayUlala();">Ulala</a>
-                    </li>
-                    <li>
-                        <a data-i18n="common.hamster">Hamster</a>
+                        <a class="page-scroll" href="#pets" data-i18n="common.pets">Pets</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about" data-i18n="common.about">About</a>
@@ -91,6 +85,87 @@
             </div>
         </div>
     </header>
+	
+	<section class="bg-primary" id="nous">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading" data-i18n="common.about">Nous</h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-justify">
+                    <p class="text-faded" data-i18n="common.about-description-line1">Nos voyages</p>
+                    <p class="text-faded" data-i18n="common.about-description-line2">Notre mariage</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div id="typed-intro"></div>    
+                </div>
+                <!--
+                    <div class="col-lg-4 center">
+                        <div id="weather"></div>
+                    </div>
+                -->
+            </div>
+        </div>
+
+		<!--
+        <div class="container menu-button">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <a href="#menu" class="page-scroll btn btn-default btn-xl sr-button">Voir le menu</a>
+                </div>
+            </div>
+        </div>
+		-->
+
+    </section>
+
+    <section id="pets">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading" data-i18n="common.menu">Animaux</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="menu-box" ng-click="displayRamses();">
+                        <i class="fa fa-4x fa-coffee text-primary sr-icons"></i>
+                        <h3 data-i18n="common.menu-breakfast-title">Ramsès</h3>
+                        <p class="text-muted">Le petit noir</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="menu-box" ng-click="displayFreddy();">
+                        <i class="fa fa-4x fa-cutlery text-primary sr-icons"></i>
+                        <h3 data-i18n="common.menu-lunch-title">Freddy</h3>
+                        <p class="text-muted">Le gros mignon</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="menu-box" ng-click="displayUlala();">
+                        <i class="fa fa-4x fa-beer text-primary sr-icons"></i>
+                        <h3 data-i18n="common.menu-diner-title">Ulala</h3>
+                        <p class="text-muted">Le petit sauvage</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="menu-box">
+                        <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                        <h3 data-i18n="common.menu-drink-title">Hamsters</h3>
+                        <p class="text-muted">Les deux premiers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="monstres">
         <div class="container">

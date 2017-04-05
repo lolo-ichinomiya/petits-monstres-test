@@ -58,8 +58,8 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
   $scope.displayRamses = function() {
 
     $scope.selectedImages = [
-      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19 (1).jpg', w: 600, h: 400 },
-      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19.jpg', w: 600, h: 400 },
+      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19 (1).jpg', w: 436, h: 585 },
+      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlRamses + '2014-06-19.jpg', w: 436, h: 585 },
     ];
 
     $scope.starSelectedGalery();
@@ -68,12 +68,12 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
   $scope.displayFreddy = function() {
 
     $scope.selectedImages = [
-      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0968.JPG', w: 600, h: 400 },
-      { id: 2, name:'Freddy2', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0974.JPG', w: 600, h: 400 },
-      { id: 3, name:'Freddy3', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0982.JPG', w: 600, h: 400 },
-      { id: 4, name:'Freddy4', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0989.JPG', w: 600, h: 400 },
-      { id: 5, name:'Freddy5', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_1005.JPG', w: 600, h: 400 },
-      { id: 6, name:'Freddy6', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + '2016-07-27.jpg', w: 600, h: 400 },
+      { id: 1, name:'Freddy1', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0968.JPG', w: 436, h: 585 },
+      { id: 2, name:'Freddy2', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0974.JPG', w: 436, h: 585 },
+      { id: 3, name:'Freddy3', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0982.JPG', w: 436, h: 585 },
+      { id: 4, name:'Freddy4', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_0989.JPG', w: 436, h: 585 },
+      { id: 5, name:'Freddy5', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + 'IMG_1005.JPG', w: 436, h: 585 },
+      { id: 6, name:'Freddy6', src: $scope.baseImagesUrl + $scope.baseImagesUrlFreddy + '2016-07-27.jpg', w: 436, h: 585 },
     ];
 
     $scope.starSelectedGalery();
@@ -81,13 +81,13 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
 
   $scope.displayUlala = function() {
     $scope.selectedImages = [
-      { id: 1, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0138.JPG', w: 600, h: 400 },
-      { id: 2, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0139.JPG', w: 600, h: 400 },
-      { id: 3, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0206.JPG', w: 600, h: 400 },
-      { id: 4, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0235.JPG', w: 600, h: 400 },
-      { id: 5, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0281.JPG', w: 600, h: 400 },
-      { id: 6, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0328.JPG', w: 600, h: 400 },
-      { id: 7, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0357.JPG', w: 600, h: 400 },
+      { id: 1, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0138.JPG', w: 436, h: 585 },
+      { id: 2, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0139.JPG', w: 436, h: 585 },
+      { id: 3, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0206.JPG', w: 436, h: 585 },
+      { id: 4, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0235.JPG', w: 436, h: 585 },
+      { id: 5, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0281.JPG', w: 436, h: 585 },
+      { id: 6, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0328.JPG', w: 436, h: 585 },
+      { id: 7, name:'Ulala', src: $scope.baseImagesUrl + $scope.baseImagesUrlUlala + 'IMG_0357.JPG', w: 436, h: 585 },
     ];
 
     $scope.starSelectedGalery();
@@ -126,7 +126,7 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
     gallery.init();
   };
 
-  $scope.displayFreddy();
+  // $scope.displayFreddy();
 	// $scope.setLocale('jp-JP');
 
 
