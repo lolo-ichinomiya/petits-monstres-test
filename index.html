@@ -81,11 +81,13 @@
         <div class="header-content">
             <div class="header-content-inner">
               Bienvenue Chez Les Petits Monstres
+              <br />
+              {{ menu-title }}
                 <!--a href="#about" class="btn btn-primary btn-xl page-scroll">About</a-->
             </div>
         </div>
     </header>
-	
+
 	<section class="bg-primary" id="nous">
         <div class="container">
             <div class="row">
@@ -102,7 +104,7 @@
                     <p class="text-faded" data-i18n="common.about-description-line2">Notre mariage</p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <div id="typed-intro"></div>    
+                    <div id="typed-intro"></div>
                 </div>
                 <!--
                     <div class="col-lg-4 center">
@@ -271,7 +273,9 @@
     <!-- Plugin JavaScript -->
     <script src="js/angular/angular-cookies.js"></script>
     <script src="js/angular/angular-sanitize.js"></script>
-    <script src="js/angular/angular-localization.js"></script>
+    <script src="js/angular/angular-translate.min.js"></script>
+    <script src="js/angular/angular-translate-loader-static-files.min.js"></script>
+    <!-- script src="js/angular/angular-localization.js"></script-->
 
     <script src="js/scrollreveal.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>

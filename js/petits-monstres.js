@@ -1,52 +1,20 @@
-var app = angular.module('petitsMonstres', ['ngRoute', 'ngLocalize']);
+var app = angular.module('petitsMonstres', ['ngRoute', 'pascalprecht.translate']);
 
-app.value('localeConf', {
-    basePath: 'lang',
-    defaultLocale: 'fr-FR',
-    sharedDictionary: 'common',
-    fileExtension: '.lang.json',
-    persistSelection: true,
-    cookieName: 'COOKIE_LOCALE_LANG',
-    observableAttrs: new RegExp('^data-(?!ng-|i18n)'),
-    delimiter: '::'
-});
-
-app.value('localeSupported', [
-    'fr-FR',
-    'jp-JP'
-])
+app.config(['$translateProvider', function($translateProvider) {
+  $translateProvider.useStaticFilesLoader({
+    prefix: '/lang/locale-',
+    suffix: '.json'
+  });
+  $translateProvider.preferredLanguage('fr');
+  $translateProvider.fallbackLanguage('fr');
+  // $translateProvider.useMissingTranslationHandlerLog();
+  // $translateProvider.useLocalStorage();
+  // $translateProvider.useSanitizeValueStrategy(null);
+}])
 
 /* Controllers */
 // app.controller('MainCtrl', function ($scope, $location, locale/*, localeEvents*/) {
-app.controller('MainCtrl', function ($scope, $location, $timeout, locale) {
-	/*$scope.strings = {};
-	locale.ready('common').then(function() {
-		$scope.strings.name = locale.getString('common.name');
-	});*/
-
-	$scope.locale = locale;
-	// $scope.setLocale = $scope.locale.setLocale;
-
-
-	$scope.setLocale = function Test(loc) {
-		$scope.locale.setLocale(loc);
-
-		// $scope.locale.setLocale = $scope.locale.getLocale();
-		// $scope.setLocale = loc;
-		console.log("Take from JSON:" + $scope.locale);
-		console.log("Take from JSON:" + locale.getString('common.about', false));
-		var line1 = $scope.locale.getString('common.typed-line-1');
-		var line2 = $scope.locale.getString('common.typed-line-2');
-		var line3 = $scope.locale.getString('common.typed-line-3');
-		var typedValues = [line1, line2, line3];
-
-		var typedValue = [];
-		typedValue['jp-JP'] = ["おばんざい", "家庭料理", "多国籍料理"];
-	    typedValue['fr-FR'] = ["Cuisine JP", "Cuisine FR", "Espace"];
-	    typedValue['en-US'] = ["Japanese", "Western", "Espace"];
-
-		// startTyped(typedValue[$scope.locale.getLocale()]);
-	}
+app.controller('MainCtrl', function ($scope, $location, $timeout, $translate) {
 
   $scope.baseImagesUrl = 'images/pets/';
   $scope.baseImagesUrlRamses = 'ramses/';
