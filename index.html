@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jp" data-ng-app="petitsMonstres">
+<html lang="jp" data-ng-app="miyalolo">
 
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Les Petits Monstres - プチモンスター</title>
+    <title>{{ 'HEADER_TITLE' | translate }}</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -47,28 +47,24 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand page-scroll" href="#page-top" data-i18n="common.menu-title">Les petits monstres</a>
+                <a class="navbar-brand page-scroll" href="#page-top"><span translate="MENU_TITLE">Chez MiyaLolo</span></a>
                 <div class="locales-flags">
-                    <a data-ng-click="setLocale('jp-JP')" href=""><img width="32" height="32" src="images/flags/japan-icon.png" alt="JP" title="日本語" /></a>
-                    <a data-ng-click="setLocale('fr-FR')" href=""><img width="32" height="32" src="images/flags/france-icon.png" alt="FR" title="Français" /></a>
+                    <a data-ng-click="changeLanguage('ja')" href=""><img width="32" height="32" src="images/flags/japan-icon.png" alt="JP" title="日本語" /></a>
+                    <a data-ng-click="changeLanguage('fr')" href=""><img width="32" height="32" src="images/flags/france-icon.png" alt="FR" title="Français" /></a>
                 </div>
-            </div>
-
-            <div>
-
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#nous" data-i18n="common.nous">Nous</a>
+                        <a class="page-scroll" href="#us"><span translate="NAV_TITLE_NOUS"></span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#pets" data-i18n="common.pets">Pets</a>
+                        <a class="page-scroll" href="#pets"><span translate="NAV_TITLE_PETS"></span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about" data-i18n="common.about">About</a>
+                        <a class="page-scroll" href="#about"><span translate="NAV_TITLE_ABOUT"></span></a>
                     </li>
                 </ul>
             </div>
@@ -80,23 +76,17 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-              Bienvenue Chez Les Petits Monstres
-              <br />
-              Using angular
-              {{ RAMSES | translate}}
-              <br />
-              Using HTML
-              <span translate="RAMSES"></span>
-                <!--a href="#about" class="btn btn-primary btn-xl page-scroll">About</a-->
+              <span translate="WELCOME_MESSAGE"></span>
+              <!--a href="#about" class="btn btn-primary btn-xl page-scroll">About</a-->
             </div>
         </div>
     </header>
 
-	<section class="bg-primary" id="nous">
+	<section class="bg-primary" id="us">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-heading" data-i18n="common.about">Nous</h2>
+                    <h2 class="section-heading"><span translate="SECTION_US_TITLE"></span></h2>
                     <hr class="light">
                 </div>
             </div>
@@ -104,8 +94,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 text-justify">
-                    <p class="text-faded" data-i18n="common.about-description-line1">Nos voyages</p>
-                    <p class="text-faded" data-i18n="common.about-description-line2">Notre mariage</p>
+                    <p class="text-faded"><span translate="SECTION_US_TRIPS"></span></p>
+                    <p class="text-faded"><span translate="SECTION_US_WEDDING"></span></p>
                 </div>
                 <div class="col-lg-4 text-center">
                     <div id="typed-intro"></div>
@@ -134,8 +124,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-heading" data-i18n="common.menu">Animaux</h2>
-                    <hr class="primary">
+                    <h2 class="section-heading"><span translate="SECTION_PETS_TITLE"></span></h2>
+                    <hr class="primary" />
                 </div>
             </div>
         </div>
@@ -143,30 +133,30 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="menu-box" ng-click="displayRamses();">
-                        <i class="fa fa-4x fa-coffee text-primary sr-icons"></i>
-                        <h3 data-i18n="common.menu-breakfast-title">Ramsès</h3>
-                        <p class="text-muted">Le petit noir</p>
+                        <i class="fa fa-4x fa-paw text-primary sr-icons"></i>
+                        <h3><span translate="RAMSES"></span></h3>
+                        <p class="text-muted"><span translate="RAMSES_DESC"></span></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="menu-box" ng-click="displayFreddy();">
                         <i class="fa fa-4x fa-cutlery text-primary sr-icons"></i>
-                        <h3 data-i18n="common.menu-lunch-title">Freddy</h3>
-                        <p class="text-muted">Le gros mignon</p>
+                        <h3><span translate="FREDDY"></span></h3>
+                        <p class="text-muted"><span translate="FREDDY_DESC"></span></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="menu-box" ng-click="displayUlala();">
-                        <i class="fa fa-4x fa-beer text-primary sr-icons"></i>
-                        <h3 data-i18n="common.menu-diner-title">Ulala</h3>
-                        <p class="text-muted">Le petit sauvage</p>
+                        <i class="fa fa-4x fa-paw text-primary sr-icons"></i>
+                        <h3><span translate="ULALA"></span></h3>
+                        <p class="text-muted"><span translate="ULALA_DESC"></span></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="menu-box">
                         <i class="fa fa-4x fa-glass text-primary sr-icons"></i>
-                        <h3 data-i18n="common.menu-drink-title">Hamsters</h3>
-                        <p class="text-muted">Les deux premiers</p>
+                        <h3><span translate="HAMSTER"></span></h3>
+                        <p class="text-muted"><span translate="HAMSTER_DESC"></p>
                     </div>
                 </div>
             </div>
@@ -177,88 +167,138 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                <p data-i18n="common.gallery-title">Petits monstres</p>
 
+                  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-                <!-- Root element of PhotoSwipe. Must have class pswp. -->
-                <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                    <!-- Background of PhotoSwipe.
+                         It's a separate element as animating opacity is faster than rgba(). -->
+                    <div class="pswp__bg"></div>
 
-                  <!-- Background of PhotoSwipe.
-                       It's a separate element as animating opacity is faster than rgba(). -->
-                  <div class="pswp__bg"></div>
+                    <!-- Slides wrapper with overflow:hidden. -->
+                    <div class="pswp__scroll-wrap">
 
-                  <!-- Slides wrapper with overflow:hidden. -->
-                  <div class="pswp__scroll-wrap">
+                        <!-- Container that holds slides.
+                            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                            Don't modify these 3 pswp__item elements, data is added later on. -->
+                        <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                        </div>
 
-                      <!-- Container that holds slides.
-                          PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                          Don't modify these 3 pswp__item elements, data is added later on. -->
-                      <div class="pswp__container">
-                          <div class="pswp__item"></div>
-                          <div class="pswp__item"></div>
-                          <div class="pswp__item"></div>
-                      </div>
+                        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                        <div class="pswp__ui pswp__ui--hidden">
 
-                      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-                      <div class="pswp__ui pswp__ui--hidden">
+                            <div class="pswp__top-bar">
 
-                          <div class="pswp__top-bar">
+                                <!--  Controls are self-explanatory. Order can be changed. -->
 
-                              <!--  Controls are self-explanatory. Order can be changed. -->
+                                <div class="pswp__counter"></div>
 
-                              <div class="pswp__counter"></div>
+                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-                              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                                <button class="pswp__button pswp__button--share" title="Share"></button>
 
-                              <button class="pswp__button pswp__button--share" title="Share"></button>
+                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 
-                              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-                              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                              <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                              <!-- element will get class pswp__preloader--active when preloader is running -->
-                              <div class="pswp__preloader">
-                                  <div class="pswp__preloader__icn">
-                                    <div class="pswp__preloader__cut">
-                                      <div class="pswp__preloader__donut"></div>
+                                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                                <!-- element will get class pswp__preloader--active when preloader is running -->
+                                <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                      <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                      </div>
                                     </div>
-                                  </div>
-                              </div>
-                          </div>
+                                </div>
+                            </div>
 
-                          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                              <div class="pswp__share-tooltip"></div>
-                          </div>
+                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                <div class="pswp__share-tooltip"></div>
+                            </div>
 
-                          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                          </button>
+                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                            </button>
 
-                          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                          </button>
+                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                            </button>
 
-                          <div class="pswp__caption">
-                              <div class="pswp__caption__center"></div>
-                          </div>
+                            <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                            </div>
 
-                      </div>
+                        </div>
+
+                    </div>
 
                   </div>
 
-              </div>
-
-
-
-            </div>
+                </div>
           </div>
       </div>
     </section>
+
+
+    <section id="about" class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-heading"><span translate="SECTION_ABOUT_TITLE"></span></h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    </section>
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+
+                <div class="row">
+                    <p><span translate="MY_NAME"></span> - {{ fullYear }}</p>
+                    <div class="col-lg-4 text-center">
+                        <i class="fa fa-phone fa-3x sr-contact"></i>
+                        <p>090-5000-5548</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i class="fa fa-home fa-3x sr-contact"></i>
+                        <p><span translate="SECTION_ABOUT_ADDRESS"></span></p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                        <p><a href="mailto:loic.belleteste@gmail.com">loic.belleteste@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <ul class="list-inline">
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com/lolochin"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.imgrum.net/user/neuf_barre/2997403498"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="files/Loic_Belleteste_CV_FR.pdf"><i class="fa fa-download fa-fw fa-3x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download business card</a-->
+            </div>
+        </div>
+    </aside>
 
     <footer id="about" class="bg-dark">
         <div class="row">
             <div class="col-lg-8 text-center"></div>
             <div class="col-lg-4 text-center">
-                <p>Copyright @ Loïc BELLETESTE 2016</p>
+                <!--p><span translate="MY_NAME">Loïc BELLETESTE</span></p-->
             </div>
         </div>
     </footer>
@@ -302,7 +342,7 @@
     <script src="js/creative.js"></script>
 
 
-    <script src="js/petits-monstres.js"></script>
+    <script src="js/miyalolo.js"></script>
 
 </body>
 

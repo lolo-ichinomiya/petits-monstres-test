@@ -1,4 +1,4 @@
-var app = angular.module('petitsMonstres', ['ngCookies', 'ngRoute', 'LocalStorageModule', 'pascalprecht.translate']);
+var app = angular.module('miyalolo', ['ngCookies', 'ngRoute', 'LocalStorageModule', 'pascalprecht.translate']);
 
 app.config(function (localStorageServiceProvider) {
   localStorageServiceProvider
@@ -68,7 +68,12 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, $translate) {
     $scope.starSelectedGalery();
   };
 
+  $scope.fullYear = new Date().getFullYear();
   $scope.numberLoaded = true;
+
+  $scope.changeLanguage = function(lang) {
+    $translate.use(lang);
+  };
 
   $scope.starSelectedGalery = function() {
     var pswpElement = document.querySelectorAll('.pswp')[0];
