@@ -1,20 +1,28 @@
-var app = angular.module('petitsMonstres', ['ngRoute', 'pascalprecht.translate']);
+var app = angular.module('petitsMonstres', ['ngCookies', 'ngRoute', 'LocalStorageModule', 'pascalprecht.translate']);
+
+app.config(function (localStorageServiceProvider) {
+  localStorageServiceProvider
+    .setPrefix('C:/Users/loic/Documents/GitHub/petits-monstres-test/')
+    .setStorageType('localStorage');
+});
 
 app.config(['$translateProvider', function($translateProvider) {
   $translateProvider.useStaticFilesLoader({
-    prefix: '/lang/locale-',
+    prefix: 'lang/locale-',
     suffix: '.json'
   });
   $translateProvider.preferredLanguage('fr');
   $translateProvider.fallbackLanguage('fr');
-  // $translateProvider.useMissingTranslationHandlerLog();
-  // $translateProvider.useLocalStorage();
+  $translateProvider.useMissingTranslationHandlerLog();
+  $translateProvider.useLocalStorage();
   $translateProvider.useSanitizeValueStrategy(null);
 }])
 
 /* Controllers */
 // app.controller('MainCtrl', function ($scope, $location, locale/*, localeEvents*/) {
 app.controller('MainCtrl', function ($scope, $location, $timeout, $translate) {
+
+  $translate.use('fr');
 
   $scope.baseImagesUrl = 'images/pets/';
   $scope.baseImagesUrlRamses = 'ramses/';
