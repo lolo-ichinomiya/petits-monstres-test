@@ -2,7 +2,7 @@ var app = angular.module('petitsMonstres', ['ngCookies', 'ngRoute', 'LocalStorag
 
 app.config(function (localStorageServiceProvider) {
   localStorageServiceProvider
-    .setPrefix('C:/Users/loic/Documents/GitHub/petits-monstres-test/')
+    .setPrefix('https://lolo-ichinomiya.github.io/petits-monstres-test/')
     .setStorageType('localStorage');
 });
 
