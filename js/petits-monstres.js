@@ -9,7 +9,7 @@ app.config(['$translateProvider', function($translateProvider) {
   $translateProvider.fallbackLanguage('fr');
   // $translateProvider.useMissingTranslationHandlerLog();
   // $translateProvider.useLocalStorage();
-  // $translateProvider.useSanitizeValueStrategy(null);
+  $translateProvider.useSanitizeValueStrategy(null);
 }])
 
 /* Controllers */
