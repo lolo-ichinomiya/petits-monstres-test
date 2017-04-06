@@ -19,7 +19,6 @@ app.config(['$translateProvider', function($translateProvider) {
 }])
 
 /* Controllers */
-// app.controller('MainCtrl', function ($scope, $location, locale/*, localeEvents*/) {
 app.controller('MainCtrl', function ($scope, $location, $timeout, $translate) {
 
   $translate.use('fr');
