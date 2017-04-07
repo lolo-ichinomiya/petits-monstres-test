@@ -231,6 +231,8 @@
 
     </section>
 
+	<div ng-view></div>
+	
     <section id="monstres">
         <div class="container">
             <div class="row">
@@ -307,66 +309,58 @@
           </div>
       </div>
     </section>
-
-
-    <section id="about" class="bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading"><span translate="SECTION_ABOUT_TITLE"></span></h2>
-                <hr class="primary">
-            </div>
-        </div>
-    </div>
-    </section>
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-
-                <div class="row">
-                    <p><span translate="MY_NAME"></span> - {{ fullYear }}</p>
-                    <div class="col-lg-4 text-center">
-                        <i class="fa fa-phone fa-3x sr-contact"></i>
-                        <p>090-5000-5548</p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <i class="fa fa-home fa-3x sr-contact"></i>
-                        <p><span translate="SECTION_ABOUT_ADDRESS"></span></p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                        <p><a href="mailto:loic.belleteste@gmail.com">loic.belleteste@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <ul class="list-inline">
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/lolochin"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://www.imgrum.net/user/neuf_barre/2997403498"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                            </li>
-                            <li>
-                                <a href="files/Loic_Belleteste_CV_FR.pdf"><i class="fa fa-download fa-fw fa-3x"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!--a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download business card</a-->
-            </div>
-        </div>
-    </aside>
+	
+	<section id="about" class="bg-light-dark">
+		<!--FOOTER DESCRIPTION -->
+		<div class="container">
+			<div class="row">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="section-heading"><span translate="SECTION_ABOUT_TITLE"></span></h2>
+						<hr class="primary">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<p>
+					<i class="fa fa-envelope-o fa-2x sr-contact"></i>Courriel<br/>
+						<span><a href="mailto:loic.belleteste@gmail.com">loic.belleteste@gmail.com</a></span>
+					</p>
+					<p>
+						<i class="fa fa-home fa-2x sr-contact"></i>Adresse<br/>
+						<span translate="SECTION_ABOUT_ADDRESS"><br/>
+					</p>
+					<p>
+						<i class="fa fa-phone fa-2x sr-contact"></i>Téléphone<br/>
+						<span>+81 90-5000-5548</span>
+					</p>
+				</div>
+			</div><!--/.row -->
+			<div class="row">
+				<div class="col-lg-12">
+					<p>SOCIAL LINKS</p>
+					<ul class="list-inline">
+						<li>
+							<a target="_blank" href="https://www.facebook.com/lolochin"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.instagram.com/deep.turtle"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a target="_blank" href="https://jp.linkedin.com/in/loïc-belleteste-04b88b93/en"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a href="files/Loic_Belleteste_CV_FR.pdf"><i class="fa fa-download fa-fw fa-3x"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!--/.container -->
+	</section>
 
     <footer id="about" class="bg-dark">
         <div class="row">
-            <div class="col-lg-8 text-center"></div>
-            <div class="col-lg-4 text-center">
-                <!--p><span translate="MY_NAME">Loïc BELLETESTE</span></p-->
+            <div class="col-lg-12 pull_right">
+				<p>Created by <a href="http://www.blacktie.co"><span translate="MY_NAME"></span></a> - {{ fullYear }}</p>
             </div>
         </div>
     </footer>
@@ -391,24 +385,17 @@
     <script src="js/angular/angular-translate-loader-static-files.min.js"></script>
     <script src="js/angular/angular-translate-storage-local.min.js"></script>
     <script src="js/angular/angular-translate-storage-cookie.min.js"></script>
-    <!-- script src="js/angular/angular-localization.js"></script-->
 
     <script src="js/scrollreveal.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
 
-    <!--
-    <script src="js/slick.js"></script>
-    <script src="js/angular-slick.js"></script>
-    -->
     <!--script src="js/typed.js"></script -->
     <script src="js/photoswipe.js"></script>
     <script src="js/photoswipe-ui-default.js"></script>
 
-
     <!-- Custom JavaScript -->
     <script src="js/creative.js"></script>
-
 
     <script src="js/miyalolo.js"></script>
 

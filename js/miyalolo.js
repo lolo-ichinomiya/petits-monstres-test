@@ -16,12 +16,22 @@ app.config(['$translateProvider', function($translateProvider) {
   $translateProvider.useMissingTranslationHandlerLog();
   $translateProvider.useLocalStorage();
   $translateProvider.useSanitizeValueStrategy(null);
-}])
+}]);
+
+/*app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "views/main.html"
+    })
+    .when("/milka", {
+        templateUrl : "views/milka.html"
+    })
+});*/
 
 /* Controllers */
 app.controller('MainCtrl', function ($scope, $location, $timeout, $translate, $http) {
 
-	$http({
+	/*$http({
 	  method: 'GET',
 	  url: 'https://github.com/lolo-ichinomiya/petits-monstres-test/tree/master/images/pets/freddy'
 	}).then(function successCallback(response) {
@@ -34,7 +44,7 @@ app.controller('MainCtrl', function ($scope, $location, $timeout, $translate, $h
 		console.log("erreur");
 		console.log(response);
 
-	  });
+	  });*/
 
   $translate.use('fr');
 
