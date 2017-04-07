@@ -19,7 +19,22 @@ app.config(['$translateProvider', function($translateProvider) {
 }])
 
 /* Controllers */
-app.controller('MainCtrl', function ($scope, $location, $timeout, $translate) {
+app.controller('MainCtrl', function ($scope, $location, $timeout, $translate, $http) {
+
+	$http({
+	  method: 'GET',
+	  url: 'https://github.com/lolo-ichinomiya/petits-monstres-test/tree/master/images/pets/freddy'
+	}).then(function successCallback(response) {
+
+		console.log("succès");
+		console.log(response);
+
+	  }, function errorCallback(response) {
+
+		console.log("erreur");
+		console.log(response);
+
+	  });
 
   $translate.use('fr');
 

@@ -79,7 +79,7 @@ aside {
   padding: 0;
 }
 
-.margin-top-20 {
+.margin-top-50 {
 	margin-top: 50px;
 }
 
@@ -121,7 +121,7 @@ aside {
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 200px) {
   .navbar-default {
     background-color: transparent;
     border-color: rgba(255, 255, 255, 0.3);
