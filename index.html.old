@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="jp" data-ng-app="miyalolo">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ 'HEADER_TITLE' | translate }}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/photoswipe.css" type="text/css">
+    <link rel="stylesheet" href="css/default-skin/default-skin.css" type="text/css">
+
+    <!-- Custom CSS 
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-ng-controller="MainCtrl">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand page-scroll" href="#page-top"><span translate="MENU_TITLE">Chez MiyaLolo</span></a>
+                <div class="locales-flags">
+                    <a data-ng-click="changeLanguage('ja')" href=""><img width="32" height="32" src="images/flags/japan-icon.png" alt="JP" title="日本語" /></a>
+                    <a data-ng-click="changeLanguage('fr')" href=""><img width="32" height="32" src="images/flags/france-icon.png" alt="FR" title="Français" /></a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#us"><span translate="NAV_TITLE_LIFE"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#pets"><span translate="NAV_TITLE_PETS"></span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about"><span translate="NAV_TITLE_ABOUT"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+              <span translate="WELCOME_MESSAGE"></span>
+              <!--a href="#about" class="btn btn-primary btn-xl page-scroll">About</a-->
+            </div>
+        </div>
+    </header>
+
+	<section class="bg-primary" id="us">
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading"><span translate="SECTION_LIFE_TITLE"></span></h2>
+                    <hr class="light">
+                </div>
+            </div>
+		</div>
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Chronologie</h2>
+                    <h3 class="section-subheading text-muted">Moments fleuris</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline ">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2017</h4>
+                                    <h4 class="subheading">Nerima</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Déménagement à Nerima</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2015</h4>
+                                    <h4 class="subheading">Mariage</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Mariage en France</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2011-2015</h4>
+                                    <h4 class="subheading">Ichinomiya</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Le temps d'Ichinomiya</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Pré-Japon</h4>
+                                    <h4 class="subheading">En France</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">A l'autre bout du monde</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4><span>Début</span>
+                                    <br /><span>de notre</span>
+                                    <br /><span>aventure !</span>
+								</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="pets">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-heading"><span translate="SECTION_PETS_TITLE"></span></h2>
+                    <hr class="primary" />
+                </div>
+            </div>
+        </div>
+		
+		<div class="container">
+            <div class="row text-center margin-top-50">
+                <div class="col-lg-5 col-sm-6 col-xs-6">
+                    <h3><span translate="RAMSES"></span></h3>
+					<p class="text-muted"><span translate="RAMSES_DESC"></span></p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6 col-xs-6" ng-click="displayRamses();">
+					<i class="fa fa-4x fa-paw text-primary sr-icons"></i>
+                    <!--img class="img-responsive" src="img/ipad.png" alt=""-->
+                </div>
+            </div>
+        
+            <div class="row text-center margin-top-50">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6 col-xs-push-6 col-xs-6">
+                    <h3><span translate="FREDDY"></span></h3>
+					<p class="text-muted"><span translate="FREDDY_DESC"></span></p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6 col-sm-6 col-xs-pull-6 col-xs-6" ng-click="displayFreddy();">
+					<i class="fa fa-4x fa-cutlery text-primary sr-icons"></i>
+                    <!--img class="img-responsive" src="img/dog.png" alt=""-->
+                </div>
+            </div>
+			
+			<div class="row text-center margin-top-50">
+                <div class="col-lg-5 col-sm-6 col-xs-6">
+                    <h3><span translate="ULALA"></span></h3>
+					<p class="text-muted"><span translate="ULALA_DESC"></span></p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6 col-xs-6" ng-click="displayUlala();">
+					<i class="fa fa-4x fa-paw text-primary sr-icons"></i>
+                    <!--img class="img-responsive" src="img/ipad.png" alt=""-->
+                </div>
+            </div>
+        
+            <div class="row text-center margin-top-50">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6 col-xs-push-6 col-xs-6">
+                    <h3><span translate="HAMSTER"></span></h3>
+					<p class="text-muted"><span translate="HAMSTER_DESC"></p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6 col-sm-6 col-xs-pull-6 col-xs-6">
+					<i class="fa fa-4x fa-glass text-primary sr-icons"></i>
+                    <!--img class="img-responsive" src="img/dog.png" alt=""-->
+                </div>
+            </div>
+			
+        </div>
+
+    </section>
+
+	<div ng-view></div>
+	
+    <section id="monstres">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                    <!-- Background of PhotoSwipe.
+                         It's a separate element as animating opacity is faster than rgba(). -->
+                    <div class="pswp__bg"></div>
+
+                    <!-- Slides wrapper with overflow:hidden. -->
+                    <div class="pswp__scroll-wrap">
+
+                        <!-- Container that holds slides.
+                            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                            Don't modify these 3 pswp__item elements, data is added later on. -->
+                        <div class="pswp__container">
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                            <div class="pswp__item"></div>
+                        </div>
+
+                        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                        <div class="pswp__ui pswp__ui--hidden">
+
+                            <div class="pswp__top-bar">
+
+                                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                                <div class="pswp__counter"></div>
+
+                                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                                <!-- element will get class pswp__preloader--active when preloader is running -->
+                                <div class="pswp__preloader">
+                                    <div class="pswp__preloader__icn">
+                                      <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                <div class="pswp__share-tooltip"></div>
+                            </div>
+
+                            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                            </button>
+
+                            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                            </button>
+
+                            <div class="pswp__caption">
+                                <div class="pswp__caption__center"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+          </div>
+      </div>
+    </section>
+	
+	<section id="about" class="bg-light-dark">
+		<!--FOOTER DESCRIPTION -->
+		<div class="container">
+			<div class="row">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="section-heading"><span translate="SECTION_ABOUT_TITLE"></span></h2>
+						<hr class="primary">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<p>
+					<i class="fa fa-envelope-o fa-2x sr-contact"></i>Courriel<br/>
+						<span><a href="mailto:loic.belleteste@gmail.com">loic.belleteste@gmail.com</a></span>
+					</p>
+					<p>
+						<i class="fa fa-home fa-2x sr-contact"></i>Adresse<br/>
+						<span translate="SECTION_ABOUT_ADDRESS"><br/>
+					</p>
+					<p>
+						<i class="fa fa-phone fa-2x sr-contact"></i>Téléphone<br/>
+						<span>+81 90-5000-5548</span>
+					</p>
+				</div>
+			</div><!--/.row -->
+			<div class="row">
+				<div class="col-lg-12">
+					<p>SOCIAL LINKS</p>
+					<ul class="list-inline">
+						<li>
+							<a target="_blank" href="https://www.facebook.com/lolochin"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.instagram.com/deep.turtle"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a target="_blank" href="https://jp.linkedin.com/in/loïc-belleteste-04b88b93/en"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a href="files/Loic_Belleteste_CV_FR.pdf"><i class="fa fa-download fa-fw fa-3x"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!--/.container -->
+	</section>
+
+    <footer id="about" class="bg-dark">
+        <div class="row">
+            <div class="col-lg-12 pull_right">
+				<p>Created by <a href="http://www.blacktie.co"><span translate="MY_NAME"></span></a> - {{ fullYear }}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+    <!-- script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-touch.min.js"></script-->
+
+    <!-- Plugin JavaScript -->
+    <script src="js/angular/angular-cookies.js"></script>
+    <script src="js/angular/angular-sanitize.js"></script>
+    <script src="js/angular/angular-translate.min.js"></script>
+    <script src="js/angular/angular-local-storage.min.js"></script>
+    <script src="js/angular/angular-translate-handler-log.min.js"></script>
+    <script src="js/angular/angular-translate-loader-static-files.min.js"></script>
+    <script src="js/angular/angular-translate-storage-local.min.js"></script>
+    <script src="js/angular/angular-translate-storage-cookie.min.js"></script>
+
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+
+    <!--script src="js/typed.js"></script -->
+    <script src="js/photoswipe.js"></script>
+    <script src="js/photoswipe-ui-default.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/creative.js"></script>
+
+    <script src="js/miyalolo.js"></script>
+
+</body>
+
+</html>
